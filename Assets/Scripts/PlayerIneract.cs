@@ -7,10 +7,18 @@ public class PlayerIneract : MonoBehaviour {
     public GameObject currentInterObj = null;
     public InteractionObject currentInterObjScript = null;
     public Inventory inventory;
+    private GameObject tutMan;
+    private bool isTalk = false;
 
     private void Awake()
     {
         DontDestroyOnLoad(this);
+    }
+
+    private void Start()
+    {
+        tutMan = GameObject.FindGameObjectWithTag("Tut");
+        tutMan.SetActive(false);
     }
 
     private void Update()
@@ -33,6 +41,25 @@ public class PlayerIneract : MonoBehaviour {
                 //use the item - apply its effect
                 //remove item from inventory
                 inventory.RemoveItem(iceCream);
+            }
+        }
+        //check to see if this object talks and has a message
+        if(Input.GetButtonDown("Talk"))
+        {
+            //tell the object to give its message
+            currentInterObjScript.Talk();
+            if (currentInterObjScript.message == "Press E to pick up items and P to use Ice Cream.")
+            {
+                if (isTalk == false)
+                {
+                    tutMan.SetActive(true);
+                    isTalk = true;
+                }
+                else if (isTalk == true)
+                {
+                    tutMan.SetActive(false);
+                    isTalk = false;
+                }
             }
         }
     }
