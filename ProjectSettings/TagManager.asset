@@ -7,8 +7,6 @@ TagManager:
   - Buc
   - EndFirstLevel
   - InterObject
-  - Hero
-  - Enemy
   layers:
   - Default
   - TransparentFX

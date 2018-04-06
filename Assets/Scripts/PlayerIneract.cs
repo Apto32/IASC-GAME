@@ -23,6 +23,18 @@ public class PlayerIneract : MonoBehaviour {
                 inventory.AddItem(currentInterObj);
             }
         }
+        //use an item
+        if(Input.GetButtonDown("Use Item"))
+        {
+            //check inventory for an item
+            GameObject iceCream = inventory.FindItemByType("Ice Cream");
+            if (iceCream != null)
+            {
+                //use the item - apply its effect
+                //remove item from inventory
+                inventory.RemoveItem(iceCream);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
