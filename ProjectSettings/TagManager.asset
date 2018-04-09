@@ -8,6 +8,7 @@ TagManager:
   - EndFirstLevel
   - InterObject
   - Tut
+  - EndTrans1
   layers:
   - Default
   - TransparentFX
@@ -50,4 +51,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2430899383
+    locked: 0
+  - name: Doors
+    uniqueID: 3709694197
     locked: 0

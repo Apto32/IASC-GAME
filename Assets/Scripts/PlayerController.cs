@@ -52,5 +52,10 @@ public class PlayerController : MonoBehaviour {
             SceneManager.LoadScene("Transition");
             transform.position = new Vector2(0.0f, 0.0f);
         }
+        if (other.tag == "EndTrans1")
+        {
+            SceneManager.LoadScene("Level_2");
+            transform.position = new Vector2(0.0f, 0.0f);
+        }
     }
 }

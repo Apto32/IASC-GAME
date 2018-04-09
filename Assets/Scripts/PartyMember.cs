@@ -12,6 +12,7 @@ public class PartyMember : MonoBehaviour {
     private Animator anim;
     private bool playerMoving;
     private Vector2 lastMove;
+    private Vector2 zero = new Vector2(0.0f, 0.0f);
     // Use this for initialization
     private void Awake()
     {

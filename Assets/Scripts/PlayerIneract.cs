@@ -44,7 +44,7 @@ public class PlayerIneract : MonoBehaviour {
             }
         }
         //check to see if this object talks and has a message
-        if(Input.GetButtonDown("Talk"))
+        if(Input.GetButtonDown("Talk") && currentInterObj)
         {
             //tell the object to give its message
             currentInterObjScript.Talk();
