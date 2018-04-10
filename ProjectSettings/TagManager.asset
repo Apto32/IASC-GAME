@@ -11,6 +11,8 @@ TagManager:
   - EndTrans1
   - Hero
   - Enemy
+  - EndTrans2
+  - EndSecondLevel
   layers:
   - Default
   - TransparentFX

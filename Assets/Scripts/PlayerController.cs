@@ -57,5 +57,16 @@ public class PlayerController : MonoBehaviour {
             SceneManager.LoadScene("Level_2");
             transform.position = new Vector2(0.0f, 0.0f);
         }
+        if (other.tag == "EndSecondLevel")
+        {
+            SceneManager.LoadScene("Transition_2");
+            transform.position = new Vector2(0.0f, 0.0f);
+        }
+        if (other.tag == "EndTrans2")
+        {
+            SceneManager.LoadScene("Level_3");
+            transform.position = new Vector2(0.0f, 0.0f);
+        }
     }
 }
+
