@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (SceneManager.GetActiveScene().name == "Transition")
+        if (SceneManager.GetActiveScene().name == "Transition" || SceneManager.GetActiveScene().name == "Transition_2")
         {
             transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
         }
