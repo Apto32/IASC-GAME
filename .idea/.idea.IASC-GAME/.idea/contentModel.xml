@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Ben\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_IASC-GAME.-1796275749.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Ben\Documents\GitHub\IASC-GAME" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Plugins" t="Include">
+          <e p="Editor" t="Include">
+            <e p="JetBrains" t="Include">
+              <e p="Unity3DRider.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Battle Scripts" t="Include">
+            <e p="BaseEnemy.cs" t="Include" />
+            <e p="BaseHero.cs" t="Include" />
+            <e p="EnemyStateMachine.cs" t="Include" />
+            <e p="HeroStateMachine.cs" t="Include" />
+          </e>
+          <e p="CameraController.cs" t="Include" />
+          <e p="Character Classes" t="Include">
+            <e p="BaseCharacterClass.cs" t="Include" />
+            <e p="BaseHealerClass.cs" t="Include" />
+            <e p="BaseSupportClass.cs" t="Include" />
+            <e p="BaseWarriorClass.cs" t="Include" />
+          </e>
+          <e p="CheckForEncounter.cs" t="Include" />
+          <e p="DontDestroyOnLoad.cs" t="Include" />
+          <e p="InteractionObject.cs" t="Include" />
+          <e p="Inventory.cs" t="Include" />
+          <e p="Items" t="Include">
+            <e p="BaseFood.cs" t="Include" />
+            <e p="BaseItem.cs" t="Include" />
+            <e p="BasePotion.cs" t="Include" />
+            <e p="BaseScroll.cs" t="Include" />
+            <e p="BaseStatItem.cs" t="Include" />
+            <e p="BaseWeapon.cs" t="Include" />
+            <e p="CreateNewWeapon.cs" t="Include" />
+          </e>
+          <e p="PartyMember.cs" t="Include" />
+          <e p="PlayerController.cs" t="Include" />
+          <e p="PlayerIneract.cs" t="Include" />
+          <e p="TitleClick.cs" t="Include" />
+          <e p="TurnBasedCombat" t="Include">
+            <e p="TurnBasedCombatStateMachine.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="IASC-GAME.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

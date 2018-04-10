@@ -9,6 +9,8 @@ TagManager:
   - InterObject
   - Tut
   - EndTrans1
+  - Hero
+  - Enemy
   layers:
   - Default
   - TransparentFX
