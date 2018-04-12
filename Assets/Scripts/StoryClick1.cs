@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TitleClick : MonoBehaviour {
+public class StoryClick1 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +16,7 @@ public class TitleClick : MonoBehaviour {
 	}
     public void OnMouseClick()
     {
-        SceneManager.LoadScene("StoryIntro");
+        SceneManager.LoadScene("Level_1");
     }
 
 }
