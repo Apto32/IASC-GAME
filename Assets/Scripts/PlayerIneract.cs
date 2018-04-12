@@ -8,6 +8,7 @@ public class PlayerIneract : MonoBehaviour {
     public InteractionObject currentInterObjScript = null;
     public Inventory inventory;
     private GameObject tutMan;
+    private new AudioSource audio;
     private bool isTalk = false;
 
     private void Awake()
@@ -17,18 +18,22 @@ public class PlayerIneract : MonoBehaviour {
 
     private void Start()
     {
+        audio = GetComponent<AudioSource>();
         tutMan = GameObject.FindGameObjectWithTag("Tut");
         tutMan.SetActive(false);
+        
     }
 
     private void Update()
     {
         if(Input.GetButtonDown ("Interact") && currentInterObj)
         {
+            
             //Check to see if this object is to be stored in inventory
             if (currentInterObjScript.inventory)
             {
                 inventory.AddItem(currentInterObj);
+                audio.Play();
             }
         }
         //use an item
