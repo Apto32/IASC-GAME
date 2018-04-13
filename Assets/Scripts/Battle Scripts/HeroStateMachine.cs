@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class StoryClick1 : MonoBehaviour {
+public class HeroStateMachine : MonoBehaviour {
+
+    public BaseHero hero;
 
 	// Use this for initialization
 	void Start () {
@@ -14,10 +15,4 @@ public class StoryClick1 : MonoBehaviour {
 	void Update () {
 		
 	}
-    public void OnMouseClick()
-    {
-	    
-        SceneManager.LoadScene("Level_1");
-    }
-
 }
