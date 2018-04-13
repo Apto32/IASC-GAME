@@ -16,7 +16,8 @@ public class StoryClick1 : MonoBehaviour {
 	}
     public void OnMouseClick()
     {
-        SceneManager.LoadScene("Level_1");
+	    
+        SceneManager.LoadScene("CharacterCust");
     }
 
 }

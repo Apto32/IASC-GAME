@@ -15,38 +15,46 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Battle Scripts" t="Include">
-            <e p="BaseEnemy.cs" t="Include" />
-            <e p="BaseHero.cs" t="Include" />
-            <e p="EnemyStateMachine.cs" t="Include" />
-            <e p="HeroStateMachine.cs" t="Include" />
+            <e p="Base Player" t="Include">
+              <e p="BasePlayer.cs" t="Include" />
+              <e p="Create Player" t="Include">
+                <e p="CreateNewCharacter.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Character Classes" t="Include">
+              <e p="BaseCharacterClass.cs" t="Include" />
+              <e p="BaseWYG.cs" t="Include" />
+            </e>
+            <e p="Character Creation GUI" t="Include">
+              <e p="CreateAPlayerGUI.cs" t="Include" />
+              <e p="DisplayCreatePlayerFunctions.cs" t="Include" />
+              <e p="StatAllocationModule" t="Include">
+                <e p="StatAllocationModule.cs" t="Include" />
+              </e>
+            </e>
+            <e p="CheckForEncounter.cs" t="Include" />
+            <e p="GameInformation" t="Include">
+              <e p="GameInformation.cs" t="Include" />
+            </e>
+            <e p="IncreaseEXP.cs" t="Include" />
+            <e p="LevelUp.cs" t="Include" />
+            <e p="SaveAndLoading" t="Include">
+              <e p="LoadInformation.cs" t="Include" />
+              <e p="SaveInformation.cs" t="Include" />
+            </e>
+            <e p="TurnBasedCombat" t="Include">
+              <e p="TurnBasedCombatStateMachine.cs" t="Include" />
+            </e>
           </e>
           <e p="CameraController.cs" t="Include" />
-          <e p="Character Classes" t="Include">
-            <e p="BaseCharacterClass.cs" t="Include" />
-            <e p="BaseHealerClass.cs" t="Include" />
-            <e p="BaseSupportClass.cs" t="Include" />
-            <e p="BaseWarriorClass.cs" t="Include" />
-          </e>
-          <e p="CheckForEncounter.cs" t="Include" />
           <e p="DontDestroyOnLoad.cs" t="Include" />
           <e p="InteractionObject.cs" t="Include" />
           <e p="Inventory.cs" t="Include" />
-          <e p="Items" t="Include">
-            <e p="BaseFood.cs" t="Include" />
-            <e p="BaseItem.cs" t="Include" />
-            <e p="BasePotion.cs" t="Include" />
-            <e p="BaseScroll.cs" t="Include" />
-            <e p="BaseStatItem.cs" t="Include" />
-            <e p="BaseWeapon.cs" t="Include" />
-            <e p="CreateNewWeapon.cs" t="Include" />
-          </e>
           <e p="PartyMember.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerIneract.cs" t="Include" />
+          <e p="StoryClick1.cs" t="Include" />
           <e p="TitleClick.cs" t="Include" />
-          <e p="TurnBasedCombat" t="Include">
-            <e p="TurnBasedCombatStateMachine.cs" t="Include" />
-          </e>
         </e>
       </e>
       <e p="IASC-GAME.sln" t="IncludeFlat" />
