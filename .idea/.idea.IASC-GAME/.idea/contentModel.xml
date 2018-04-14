@@ -15,13 +15,27 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Battle Scripts" t="Include">
-            <e p="BaseEnemy.cs" t="Include" />
-            <e p="BaseHero.cs" t="Include" />
+            <e p="Attacks" t="Include">
+              <e p="BaseAttack.cs" t="Include" />
+              <e p="MeleeAttacks" t="Include">
+                <e p="Crush.cs" t="Include" />
+                <e p="Punch.cs" t="Include" />
+                <e p="Roll.cs" t="Include" />
+              </e>
+            </e>
+            <e p="BaseClasses" t="Include">
+              <e p="BaseClass.cs" t="Include" />
+              <e p="BaseEnemy.cs" t="Include" />
+              <e p="BaseHero.cs" t="Include" />
+            </e>
             <e p="CheckForEncounter.cs" t="Include" />
-            <e p="EnemyStateMachine.cs" t="Include" />
-            <e p="HeroStateMachine.cs" t="Include" />
-            <e p="IncreaseEXP.cs" t="Include" />
-            <e p="LevelUp.cs" t="Include" />
+            <e p="EnemySelectButton.cs" t="Include" />
+            <e p="HandleTurn.cs" t="Include" />
+            <e p="StateMachines" t="Include">
+              <e p="BattleStateMAchine.cs" t="Include" />
+              <e p="EnemyStateMachine.cs" t="Include" />
+              <e p="HeroStateMachine.cs" t="Include" />
+            </e>
           </e>
           <e p="CameraController.cs" t="Include" />
           <e p="DontDestroyOnLoad.cs" t="Include" />
@@ -32,6 +46,9 @@
           <e p="PlayerIneract.cs" t="Include" />
           <e p="StoryClick1.cs" t="Include" />
           <e p="TitleClick.cs" t="Include" />
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="Grayscale.shader" t="Include" />
         </e>
       </e>
       <e p="IASC-GAME.sln" t="IncludeFlat" />
