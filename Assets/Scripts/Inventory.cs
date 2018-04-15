@@ -8,11 +8,6 @@ public class Inventory : MonoBehaviour {
     public GameObject[] inventory = new GameObject[16];
     public Button[] InventoryButtons = new Button[16];
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(this);
-    }
-
     public void AddItem(GameObject item)
     {
         bool itemAdded = false;

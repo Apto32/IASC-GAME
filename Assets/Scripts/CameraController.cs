@@ -8,10 +8,6 @@ public class CameraController : MonoBehaviour {
     private Vector3 targetPos;
     public float moveSpeed;
     // Use this for initialization
-    private void Awake()
-    {
-        DontDestroyOnLoad(this);
-    }
     void Start () {
 		
 	}

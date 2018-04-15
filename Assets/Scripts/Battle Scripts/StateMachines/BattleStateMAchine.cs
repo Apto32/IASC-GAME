@@ -209,6 +209,7 @@ public class BattleStateMAchine : MonoBehaviour {
 					GameManager.instance.enemiesToBattle.Clear();
 
 				}
+				GameObject.Find("Inventory Canvas").SetActive(true);
 				numBattles++;
 				
 				break;

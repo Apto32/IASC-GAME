@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
 	public GameObject HeroCharacter;
 	
 	//Positions
+	public Vector3 nextHeroPosition;
 	public Vector3 lastHeroPosition; // Battle
 	//Scenes
 	public string SceneToLoac;
@@ -130,6 +131,7 @@ public class GameManager : MonoBehaviour
 		}
 		//HERO
 		lastHeroPosition = GameObject.Find("White").gameObject.transform.position;
+		nextHeroPosition = lastHeroPosition;
 		lastScene = SceneManager.GetActiveScene().name;
 		//HIDE INVENTORY
 		GameObject.Find("Inventory Canvas").SetActive(false);

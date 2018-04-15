@@ -10,12 +10,7 @@ public class PlayerIneract : MonoBehaviour {
     private GameObject tutMan;
     private new AudioSource audio;
     private bool isTalk = false;
-
-    private void Awake()
-    {
-        DontDestroyOnLoad(this);
-    }
-
+    
     private void Start()
     {
         audio = GetComponent<AudioSource>();

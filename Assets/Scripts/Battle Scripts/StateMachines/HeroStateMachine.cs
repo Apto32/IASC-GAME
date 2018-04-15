@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class HeroStateMachine : MonoBehaviour
@@ -232,6 +233,10 @@ public class HeroStateMachine : MonoBehaviour
 	void doDamage()
 	{
 		float calcDamage = hero.curATK + BSM.PerformList[0].choosenAttack.attackDamage - ((EnemyToAttack.GetComponent<EnemyStateMachine>().enemy.curDEF)/5);
+		if (calcDamage <= 0)
+		{
+			calcDamage = 0f;
+		}
 		EnemyToAttack.GetComponent<EnemyStateMachine>().TakeDamage(calcDamage);
 	}
 

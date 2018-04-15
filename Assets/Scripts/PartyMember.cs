@@ -14,10 +14,7 @@ public class PartyMember : MonoBehaviour {
     private Vector2 lastMove;
     private Vector2 zero = new Vector2(0.0f, 0.0f);
     // Use this for initialization
-    private void Awake()
-    {
-        DontDestroyOnLoad(this);
-    }
+    
     void Start()
     {
         positions.Add(target.transform.position);
