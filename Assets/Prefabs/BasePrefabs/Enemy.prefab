@@ -89,7 +89,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7ae9ff08779e13b48b4bdcc84c1d1e37, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -208,10 +208,11 @@ MonoBehaviour:
     intellect: 10
     dexterity: 10
     agility: 10
+    MagicAttacks: []
   currentState: 0
-  ProgressBar: {fileID: 0}
   Selector: {fileID: 0}
   EnemyToAttack: {fileID: 0}
+  HeroPanel: {fileID: 0}
 --- !u!114 &114227385717225158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,16 +225,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy:
-    theName: Enemy
-    baseHP: 0
-    curHP: 0
+    theName: Repressed Whighte
+    baseHP: 250
+    curHP: 250
     baseMP: 0
     curMP: 0
-    baseATK: 0
-    curATK: 0
-    baseDEF: 0
-    curDEF: 0
-    attacks: []
+    baseATK: 25
+    curATK: 25
+    baseDEF: 15
+    curDEF: 15
+    attacks:
+    - {fileID: 114340558463335126, guid: 1a10d18af7b27144a8ee542ecafc47be, type: 2}
+    - {fileID: 114730250306482062, guid: 0949bd42fd48c324ea8636f21e28ef6c, type: 2}
     rarity: 1
   currentState: 0
   Selector: {fileID: 1916638496093080}

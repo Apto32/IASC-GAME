@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
 
@@ -14,7 +15,6 @@ public class EnemyStateMachine : MonoBehaviour
 		PROCESSING,
 		CHOOSEACTION,
 		WAITING,
-		SELECTING,
 		ACTION,
 		DEAD,
 	}
@@ -32,6 +32,10 @@ public class EnemyStateMachine : MonoBehaviour
 	private bool actionStarted = false;
 	public GameObject HeroToAttack;
 	private float animSpeed = 10.0f;
+
+	//alive
+	private bool alive = true;
+	
 	
 	// Use this for initialization
 	void Start () {
@@ -55,14 +59,43 @@ public class EnemyStateMachine : MonoBehaviour
 			case(TurnState.WAITING):
 
 				break;
-			case(TurnState.SELECTING):
-
-				break;
 			case(TurnState.ACTION):
 				StartCoroutine(TimeForAction());
 				break;
 			case(TurnState.DEAD):
-
+				if (!alive)
+				{
+					return;
+				}
+				else
+				{
+					this.gameObject.tag = "DeadEnemy";
+					//not attackable
+					BSM.EnemiesInBattle.Remove(this.gameObject);
+					//disable selector
+					Selector.SetActive(false);
+					//remove all inpits heroattacks
+					if (BSM.EnemiesInBattle.Count > 0)
+					{
+						for (int i = 0; i < BSM.PerformList.Count; i++)
+						{
+							if (BSM.PerformList[i].AttackersGameObject == this.gameObject)
+							{
+								BSM.PerformList.Remove(BSM.PerformList[i]);
+							}
+							if (BSM.PerformList[i].AttackersTarget == this.gameObject)
+							{
+								BSM.PerformList[i].AttackersTarget = BSM.EnemiesInBattle[Random.Range(0, BSM.EnemiesInBattle.Count)];
+							}
+						}
+					}
+					// switch object off
+					this.gameObject.SetActive(false);
+					//set alive false
+					alive = false;
+					BSM.EnemyButtons();
+					BSM.battleStates = BattleStateMAchine.PerformAction.CHECKALIVE;
+				}
 				break;
 		}
 	}
@@ -129,7 +162,17 @@ public class EnemyStateMachine : MonoBehaviour
 
 	void DoDamage()
 	{
-		float calcDamage = enemy.curATK + BSM.PerformList[0].choosenAttack.attackDamage;
+		float calcDamage = enemy.curATK + BSM.PerformList[0].choosenAttack.attackDamage - (HeroToAttack.GetComponent<HeroStateMachine>().hero.curDEF/5);
 		HeroToAttack.GetComponent<HeroStateMachine>().TakeDamage(calcDamage);
+	}
+
+	public void TakeDamage(float getDamageAmount)
+	{
+		enemy.curHP -= getDamageAmount;
+		if (enemy.curHP <= 0)
+		{
+			enemy.curHP = 0;
+			currentState = TurnState.DEAD;
+		}
 	}
 }

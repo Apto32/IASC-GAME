@@ -16,6 +16,12 @@ TagManager:
   - Plot
   - DeadHero
   - DeadEnemy
+  - Blimp
+  - Trex
+  - region1
+  - region2
+  - region3
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

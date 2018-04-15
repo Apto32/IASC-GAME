@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour {
     private Animator anim;
     private bool playerMoving;
     private Vector2 lastMove;
-
     private void Awake()
     {
         DontDestroyOnLoad(this);
@@ -43,7 +42,7 @@ public class PlayerController : MonoBehaviour {
         anim.SetBool("PlayerMoving", playerMoving);
         anim.SetFloat("LastMoveX", lastMove.x);
         anim.SetFloat("LastMoveY", lastMove.y);
-    }
+	}
 
     private void OnTriggerEnter2D(Collider2D other)
     {
