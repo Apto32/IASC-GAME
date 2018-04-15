@@ -7,11 +7,10 @@ public class DontDestroyOnLoad : MonoBehaviour {
     void Awake()
     {
         DontDestroyOnLoad(this);
-      
     }
     // Use this for initialization
     void Start () {
-        
+		
 	}
 	
 	// Update is called once per frame

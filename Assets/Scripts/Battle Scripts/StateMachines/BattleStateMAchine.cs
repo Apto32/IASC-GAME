@@ -315,14 +315,14 @@ public class BattleStateMAchine : MonoBehaviour {
 	void CreateAttackButtons()
    	{
   		GameObject AttackButton = Instantiate(actionButton) as GameObject;
-   		Text attackButtonText = AttackButton.transform.Find("Text").gameObject.GetComponent<Text>();
+   		Text attackButtonText = AttackButton.transform.FindChild("Text").gameObject.GetComponent<Text>();
    		attackButtonText.text = "Attack";
    		AttackButton.GetComponent<Button>().onClick.AddListener(() => Input1());
    		AttackButton.transform.SetParent(actionSpacer, false);
   		atkBtns.Add(AttackButton);
 		   
 		GameObject MagicAttackButton = Instantiate(actionButton) as GameObject;
-		Text MagicAttackButtonText = MagicAttackButton.transform.Find("Text").gameObject.GetComponent<Text>();
+		Text MagicAttackButtonText = MagicAttackButton.transform.FindChild("Text").gameObject.GetComponent<Text>();
 		MagicAttackButtonText.text = "Magic";
 		MagicAttackButton.GetComponent<Button>().onClick.AddListener(() => Input3());
 		MagicAttackButton.transform.SetParent(actionSpacer, false);
@@ -333,7 +333,7 @@ public class BattleStateMAchine : MonoBehaviour {
 			   foreach (BaseAttack magicAtk in HerosToManage[0].GetComponent<HeroStateMachine>().hero.MagicAttacks)
 			   {
 				   GameObject MagicButton = Instantiate(magicButton) as GameObject;
-				   Text MagicButtonText = MagicButton.transform.Find("Text").gameObject.GetComponent<Text>();
+				   Text MagicButtonText = MagicButton.transform.FindChild("Text").gameObject.GetComponent<Text>();
 				   MagicButtonText.text = magicAtk.attackName;
 
 				   AttackButton ATB = MagicButton.GetComponent<AttackButton>();
