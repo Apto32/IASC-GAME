@@ -205,6 +205,7 @@ public class BattleStateMAchine : MonoBehaviour {
 					}
 					
 					GameManager.instance.LoadSceneAfterBattle();
+					GameManager.instance.InvCanvas.SetActive(true);
 					GameManager.instance.gameState = GameManager.GameStates.WORLD_STATE;
 					GameManager.instance.enemiesToBattle.Clear();
 

@@ -25,11 +25,13 @@ public class GameManager : MonoBehaviour
 
 	//Hero
 	public GameObject HeroCharacter;
+	public GameObject InvCanvas;
 	
 	//Positions
+	public Vector3 nextHeroPosition;
 	public Vector3 lastHeroPosition; // Battle
 	//Scenes
-	public string SceneToLoac;
+	public string SceneToLoad;
 	public string lastScene; //Battle
 	
 	//BOOLS
@@ -81,6 +83,7 @@ public class GameManager : MonoBehaviour
 		switch(gameState)
 		{
 			case(GameStates.WORLD_STATE):
+				
 				if (isWalking)
 				{
 					randomEncounter();
@@ -93,9 +96,10 @@ public class GameManager : MonoBehaviour
 				break;
 			case(GameStates.BATTLE_STATE):
 				//LOAD BATTLE SCENE
+				InvCanvas.SetActive(false);
 				StartBattle();
-				gameState = GameStates.IDLE;
 				//GO TO IDLE
+				gameState = GameStates.IDLE;
 				break;
 			case (GameStates.IDLE):
 
@@ -112,7 +116,7 @@ public class GameManager : MonoBehaviour
 	{
 		if (isWalking && canGetEncounter)
 		{
-			if (Random.Range(0, 1000) < 5)
+			if (Random.Range(0, 1000) < 7)
 			{
 				gotAttacked = true;
 			}
@@ -130,9 +134,8 @@ public class GameManager : MonoBehaviour
 		}
 		//HERO
 		lastHeroPosition = GameObject.Find("White").gameObject.transform.position;
+		nextHeroPosition = lastHeroPosition;
 		lastScene = SceneManager.GetActiveScene().name;
-		//HIDE INVENTORY
-		GameObject.Find("Inventory Canvas").SetActive(false);
 		//LOAD LEVEL
 		SceneManager.LoadScene(Regions[curRegions].battleScene);
 		//RESET HERO

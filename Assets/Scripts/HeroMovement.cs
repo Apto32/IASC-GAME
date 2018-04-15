@@ -8,11 +8,23 @@ public class HeroMovement : MonoBehaviour
 	private float moveSpeed = 325f;
 	private Vector3 curPos, lastPos;
 	private Animator anim;
+
+	public GameManager GM;
 	
 	
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
+	}
+
+	void Update()
+	{
+		Scene currentScene = SceneManager.GetActiveScene();
+		string sceneName = currentScene.name;
+		if (sceneName == "Level_1" || sceneName == "Level_2" || sceneName == "Level_3")
+		{
+			GM.InvCanvas.SetActive(true);
+		}
 	}
 	
 	void FixedUpdate ()

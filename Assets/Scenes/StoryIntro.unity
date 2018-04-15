@@ -548,6 +548,58 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 126894182}
+--- !u!1001 &219763660
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4531328541280132, guid: 25869f5fe87ea35409de903bd2f9ba72, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 27.000565
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531328541280132, guid: 25869f5fe87ea35409de903bd2f9ba72, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.3637333
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531328541280132, guid: 25869f5fe87ea35409de903bd2f9ba72, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.902937
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531328541280132, guid: 25869f5fe87ea35409de903bd2f9ba72, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531328541280132, guid: 25869f5fe87ea35409de903bd2f9ba72, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531328541280132, guid: 25869f5fe87ea35409de903bd2f9ba72, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531328541280132, guid: 25869f5fe87ea35409de903bd2f9ba72, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531328541280132, guid: 25869f5fe87ea35409de903bd2f9ba72, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114296151791257788, guid: 25869f5fe87ea35409de903bd2f9ba72,
+        type: 2}
+      propertyPath: HeroCharacter
+      value: 
+      objectReference: {fileID: 808384863}
+    - target: {fileID: 114296151791257788, guid: 25869f5fe87ea35409de903bd2f9ba72,
+        type: 2}
+      propertyPath: InvCanvas
+      value: 
+      objectReference: {fileID: 1597491113}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 25869f5fe87ea35409de903bd2f9ba72, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &280077130
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,6 +1039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cbdc3b45b036504aafc4f392111fe67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GM: {fileID: 0}
 --- !u!212 &808384872
 SpriteRenderer:
   m_ObjectHideFlags: 0

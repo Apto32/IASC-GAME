@@ -237,6 +237,7 @@ MonoBehaviour:
     attacks:
     - {fileID: 114340558463335126, guid: 1a10d18af7b27144a8ee542ecafc47be, type: 2}
     - {fileID: 114730250306482062, guid: 0949bd42fd48c324ea8636f21e28ef6c, type: 2}
+    - {fileID: 114928931400484942, guid: 49ae4080e8da89946a2f3a6d6620bf1a, type: 2}
     rarity: 1
   currentState: 0
   Selector: {fileID: 1411453819661982}
